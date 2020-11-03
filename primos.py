@@ -1,4 +1,5 @@
 from random import randint
+from typing import *
 
 def es_primo(numero: int) -> bool:
     if numero < 2:
@@ -8,6 +9,12 @@ def es_primo(numero: int) -> bool:
             return False
         else:
             return True
+
+def suma_primos(lista: List[int]) -> int:
+    suma = 0
+    for num in lista:
+        suma += num
+    return suma
 
 
 if __name__ == '__main__':
@@ -27,4 +34,5 @@ if __name__ == '__main__':
         else:
             print(f"{numero} no es primo")
 
-    # Este comentario es para hacer un cambio
+    # Mostrar la suma de los numeros primos en la lista
+    print(f"La suma de los primos es: {suma_primos(lista_numeros)}")
